@@ -362,4 +362,15 @@ function gameLoop() {
   requestAnimationFrame(gameLoop);
 }
 
+function drawPlayer() {
+    // Ganti ctx.fillRect(...) dengan ini:
+    ctx.drawImage(
+        assets.player, 
+        player.x, 
+        player.y, 
+        player.width, 
+        player.height
+    );
+}
+
 gameLoop();
