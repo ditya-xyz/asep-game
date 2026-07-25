@@ -7,8 +7,8 @@ const assets = {
   enemy: new Image()
 };
 
-assets.player.src = 'asep.png'; // Samakan persis dengan nama file di repo!
-assets.enemy.src = 'enemy.png';
+assets.player.src = 'mario.png'; // Samakan persis dengan nama file di repo!
+assets.enemy.src = 'enemy.png'; // Samakan Persisi dengan nama file di repo!
 
 // Array Penampung Partikel Ledakan
 const particles = [];
