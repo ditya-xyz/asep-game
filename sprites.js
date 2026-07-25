@@ -7,7 +7,7 @@ const assets = {
   enemy: new Image()
 };
 
-assets.player.src = 'https://cdn.phototourl.com/free/2026-07-25-2bbd7a5c-30ef-46c3-aff8-3e6639341195.png';
+assets.player.src = 'mario.png'; // Samakan persis dengan nama file di repo!
 assets.enemy.src = 'enemy.png';
 
 // Array Penampung Partikel Ledakan
