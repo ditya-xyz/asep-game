@@ -1,0 +1,151 @@
+* {
+  box-sizing: border-box;
+  user-select: none; /* Cegah teks/tombol ter-highlight di HP */
+  -webkit-user-select: none;
+  -webkit-touch-callout: none;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #1a1a1a;
+  color: #fff;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+/* Efek Overlay Pembuka */
+.intro-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+  transition: opacity 0.8s ease, visibility 0.8s ease;
+}
+
+.intro-content {
+  text-align: center;
+  animation: zoomIn 0.6s ease-out;
+}
+
+.intro-content h1 {
+  font-size: 3rem;
+  color: #ff2a2a;
+  text-shadow: 3px 3px 0 #fff;
+  margin-bottom: 10px;
+}
+
+#startBtn {
+  margin-top: 20px;
+  padding: 15px 30px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  background-color: #28a745;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: 0 5px 0 #1e7e34;
+  transition: transform 0.1s, background-color 0.2s;
+}
+
+#startBtn:active {
+  transform: translateY(4px);
+  box-shadow: 0 1px 0 #1e7e34;
+}
+
+/* Game Container Animation */
+.game-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 800px;
+  animation: fadeIn 1s ease-in-out;
+}
+
+h1 {
+  margin: 10px 0 5px 0;
+}
+
+.instructions {
+  margin-bottom: 10px;
+  font-size: 14px;
+  color: #ccc;
+}
+
+canvas {
+  border: 4px solid #fff;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+  background-color: #5c94fc;
+  max-width: 100%;
+  height: auto;
+}
+
+/* Touch Controls untuk HP */
+.touch-controls {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 15px 10px;
+  margin-top: 5px;
+}
+
+.dpad {
+  display: flex;
+  gap: 10px;
+}
+
+.touch-btn {
+  width: 60px;
+  height: 60px;
+  background: rgba(255, 255, 255, 0.2);
+  border: 2px solid #fff;
+  border-radius: 12px;
+  color: #fff;
+  font-size: 20px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  touch-action: manipulation;
+}
+
+.touch-btn:active {
+  background: rgba(255, 255, 255, 0.6);
+  transform: scale(0.95);
+}
+
+.jump-btn {
+  width: 120px;
+  background: rgba(40, 167, 69, 0.6);
+  font-size: 14px;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes zoomIn {
+  from { transform: scale(0.8); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+/* Sembunyikan kontrol touch di layar desktop jika kursor bergerak */
+@media (min-width: 1024px) {
+  .touch-controls {
+    opacity: 0.8;
+  }
+}

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <title>Game Platformer Ala Mario</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Efek Overlay Pembuka -->
+  <div id="introOverlay" class="intro-overlay">
+    <div class="intro-content">
+      <h1>MINI MARIO JS</h1>
+      <p>Gunakan Keyboard / Kontrol Sentuh di HP</p>
+      <button id="startBtn">MULAI MAIN</button>
+    </div>
+  </div>
+
+  <div class="game-container">
+    <h1>Mini Mario JS</h1>
+    <div class="instructions">
+      Laptop: <b>A/D/Spasi</b> | HP: <b>Gunakan Tombol di Layar</b>
+    </div>
+
+    <canvas id="gameCanvas" width="800" height="400"></canvas>
+
+    <!-- Controls khusus HP / Touchscreen -->
+    <div class="touch-controls">
+      <div class="dpad">
+        <button id="btnLeft" class="touch-btn">?</button>
+        <button id="btnRight" class="touch-btn">?</button>
+      </div>
+      <div class="action-btns">
+        <button id="btnJump" class="touch-btn jump-btn">? LOMPAT</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="sprites.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
